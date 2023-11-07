@@ -1,0 +1,212 @@
+#menu-icon {
+    display: none;
+}
+
+#menu {
+    position: initial;
+    background-color: inherit;
+    display: inline;
+    overflow: initial;
+    width: initial;
+    margin-top: 5px;
+}
+
+#menu ul li {
+    text-align: initial;
+    display: inline;
+    margin-left: 10px;
+}
+
+#menu ul li a {
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    
+
+}
+.search-bar{
+    top: 8px;
+    right: 50px;
+    width: 18%;
+
+}
+#results-container{
+    display: block;
+    background-color: rgb(219, 199, 199);
+    position: absolute;
+    top: 55px;
+    left: 94.5rem;
+    z-index: 4;
+    width: 18%;
+    max-width: 18%;
+}
+.result{
+    display: block;
+}
+.result-item {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.result-item img {
+    width: 50px;
+    height: 45px;
+    margin-right: 10px;
+}
+.logo {
+    margin-left: -300px;
+    font-size: 22px;
+}
+
+.search-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.anime-player {
+    display: flex;
+    gap: 1%;
+    margin: 20px 0px 0px 35px;
+}
+.anime-title::before{
+    content: "\2022"; /* Unicode character for a dot (•) */
+    margin-right: 5px; /* Add some spacing between the dot and the content */
+    color: #fffdfd; /* Color of the dot */
+    font-size: 18px; 
+    display: inline-block;
+}
+.anime-title{
+    display: block;
+   padding: 2px
+}
+.anime-title p {
+  color: #ffffff99;
+  display: inline-block;
+}
+.video-player {
+    order: 2;
+    flex: 0.8;
+    max-width: 44%;
+    height: 100%;
+}
+
+.player {
+    height: 480px;
+}
+
+.episodeTable {
+    order: 1;
+    flex: 0.3;
+    max-width: 23%;
+}
+
+.episode-list {
+    height: 600px;
+   
+}
+
+.anime-detail-box {
+    order: 1;
+    height: 500px;
+    
+}
+.anime-detail{
+    justify-content: initial;
+    gap: 20px;
+}
+.anime-detail img{
+ width: 140px;
+ height: 200px;
+
+}
+.anime-detail h3{
+    font-size: 25;
+}
+.anime-detail p{
+    font-size: 20px;
+}
+
+.categories{
+    display: flex;
+    padding: 10px 0px;
+
+}
+.item{
+    transition: 0.3s;
+}
+.emin {
+    display: none;
+    flex-direction: column;
+    max-width: 180px;
+    background: linear-gradient(56deg, white, transparent);
+    position: absolute;
+    left: 315px;
+    top: 730px;
+    z-index: 5;
+    align-items: center;
+    padding: 8px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgb(116, 104, 104);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.emin p {
+    color: white;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.emin img {
+    width: 150px;
+    height: 200px;
+}
+.item:hover{
+    filter: blur(10px);
+}
+.item:hover + .emin{
+    display: flex;
+
+}
+.emin:hover{
+    display: flex;
+}
+.emin:hover ~ .a{
+    filter: blur(10px);
+}
+.seasonContainer{
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 26%;
+    flex: 0.5;
+}
+.seasonbox{
+    order: 2;
+    background: linear-gradient(189deg, #aea9a9, transparent);
+    border-radius: 10px;
+    /* border: 2px solid #f7f7f742; */
+    padding: 10px 0px;
+    text-align: center;
+}
+.seasonbtn{
+    display: inline-block;
+    color: black;
+    background-color: rgba(255, 226, 145, 0.932);
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.playButton {
+    margin: 5px 10px;
+    padding: 5px 50px;
+    border-radius: 30px;
+    background-color: orange;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}

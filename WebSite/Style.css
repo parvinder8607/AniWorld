@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(21, 18, 36);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    background-color: rgb(30, 27, 80);
+    color:#e3ffd7;
+    padding: 10px 10px;
+}
+.head
+{
+    display: flex;
+    justify-content: space-between;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #menu-icon {
+    display: block;
+
+     /* Left side position */
+    font-size: 25px;
+    cursor: pointer;
+    
+  }
+  
+  #menu {
+    background-color: #3b2828;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Left side position by default */
+    height: 100%;
+    overflow: auto;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  
+  #menu ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  #menu ul li {
+    padding: 10px;
+    text-align: center;
+  }
+ 
+.search-icon img{
+    width: 30px;
+    height: 30px;
+}
+.search-bar{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    
+}
+.search-bar input{
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #96fa6f;
+    font-size: 18px;
+}
+.anime-title{
+    display: none;
+}
+.player{
+    position: relative;
+    height: 250px;
+}
+#loading-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+#myIframe{
+    width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#EpisodeNo{
+    margin: 5px;
+    padding: 20px ;
+    text-align: center;
+    background-color: rgb(75, 71, 92);
+    color: #74e946;
+    border-radius: 10px;
+}
+.AudioType{
+    display: flex;
+    margin: 8px;
+    padding: 18px ;
+    justify-content: center;
+    font-size: 18px;
+    color: #f3f3f3;
+    border: 1px dashed rgb(134, 118, 118);
+    border-radius: 10px;
+    background-color: #28283b;
+    box-shadow: 0px 0px 5px rgb(139, 114, 114);
+}
+.server-option{
+    margin: 10px;
+    padding: 10px 30px;
+    background-color: #302e2e;
+    border-radius: 10px;
+    color: #fff;
+}
+.server-option title{
+
+}
+
+.server-option opt{
+    
+}
+.episodeTable{
+    
+    background-color: rgb(109, 109, 109);
+    border: 2px solid rgb(59, 37, 37);
+
+}
+
+.episode-list{
+    height: 300px;
+    overflow-y: scroll;
+}
+.episodeList{
+    padding: 10px 15px;
+    color: #fff;
+}
+.episode{
+    /* margin-top: 5px;     */
+    padding: 10px 20px;
+    background-color: rgb(25, 25, 27);
+    color: #b7eba2;
+    /* border-radius: 5px; */
+   
+}
+.color2{
+    background-color: black;
+}
+.anime-detail-box{
+    display: flex;
+    order: 2;
+    padding: 40px 20px;
+    position: relative;
+    
+}
+.anime-detail-box::before{
+    content: "";
+    background-image: url("/image/anime-image.jpg"); /* Replace with the URL of your image */
+    filter: blur(10px); /* Adjust the blur value as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover; 
+    background-position: center center;
+}
+
+.anime-detail{
+    
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: space-between;
+}
+.anime-detail h3{
+    color: rgb(6, 8, 19);
+  
+}
+.anime-detail p{
+    font-size: 13px;
+    color: rgb(255, 253, 253);
+}
+.seasonContainer{
+    margin-top: 20px;
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 0.5;
+}
+.seasonbox{
+    order: 1;
+    background: linear-gradient(189deg, #aea9a9, transparent);
+    border-radius: 10px;
+    /* border: 2px solid #f7f7f742; */
+    box-shadow: -1px 1px 2px #ffffff7d;
+    padding: 20px 60px;
+    align-items: center;
+}
+.seasonbtn{
+    display: inline-block;
+    color: black;
+    background-color: rgba(255, 226, 145, 0.932);
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+@media (orientation: landscape) {
+    iframe {
+        width: 100vh;
+        height: 100vw;
+    }
+}
+ .RecommandBox{
+    background-color: #28283b;
+    padding: 5px;
+ }
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px 0px;
+   
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    max-width: 180px;
+    background-color: rgb(68, 66, 66);
+    align-items: center;
+    padding: 8px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgb(116, 104, 104);
+    cursor: pointer;
+}
+
+.item p {
+    color: white;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.item img {
+    width: 150px;
+    height: 200px;
+}
+.emin{
+    display: none;
+}
+.footer{
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
