@@ -173,7 +173,7 @@
 .emin:hover{
     display: flex;
 }
-.emin:hover ~ .a{
+.emin4:hover + .item4{
     filter: blur(10px);
 }
 .seasonContainer{
