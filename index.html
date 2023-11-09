@@ -17,7 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=65435eb3b768240012ce5e56&product=inline-share-buttons&source=platform" async="async"></script>
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=65435eb3b768240012ce5e56&product=inline-share-buttons&source=platform"
+        async="async"></script>
 </head>
 
 <body>
@@ -46,19 +48,31 @@
         </div>
     </header>
     <main>
+        <div class="slideshow-container">
+            <div class="slide">
+                <div class="slide-image"><img src="image/anime-image.jpg" alt="image1"></div>
+                <div class="slide-content">
+                    <div class="slide-title">That Time i got reincarnated as a slime</div>
+                </div>
+            </div>
+            <div class="slide"><img src="image/Eminence.jpg" alt="image2"></div>
+            <div class="slide"><img src="image/OreSuki.jpg" alt="image3"></div>
+            <div class="slide"><img src="image/The 100 Girls.jpg" alt="image4"></div>
+            <div class="slide"><img src="image/OreSuki.jpg" alt="image5"></div>
+            <a class="prev" onclick="plusSlides(-1)">&#9665</a>
+            <a class="next" onclick="plusSlides(1)">&#9665</a>
+        </div>
         <div class="RecommandBox">
             <div>
                 <h3 style="color: #afca90c7; margin: 10px; font-size: 20px;">Recommended for you</h3>
             </div>
             <div class="categories">
                 <div class="item a" data-url="/That time i got reincarnated as a Slime">
-                    <img src="image/anime-image.jpg"
-                        alt="That time I got reincarnated as a slime">
+                    <img src="image/anime-image.jpg" alt="That time I got reincarnated as a slime">
                     <p>That Time I Got Reincarnated as a Slime</p>
                 </div>
                 <div class="emin" style="top: 15px; left: 130px;">
-                    <img src="image/anime-image.jpg"
-                        alt="That time I got reincarnated as a slime">
+                    <img src="image/anime-image.jpg" alt="That time I got reincarnated as a slime">
                     <p>That Time I Got Reincarnated as a Slime</p>
                     <div class="playButton"><a href="That time i got reincarnated as a Slime">Play</a></div>
                 </div>
@@ -106,7 +120,36 @@
 
 </body>
 <script src="Script.js"></script>
+<script>
+    let slideIndex = 0;
+    showSlides();
 
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides() {
+        let i;
+        let slides = document.querySelectorAll('.slide');
+
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+
+        if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+
+        slides[slideIndex].style.display = 'block';
+        slideIndex++;
+        setTimeout(showSlides, 5000); // Change slide every 2 seconds (2000 milliseconds)
+    }
+
+</script>
 
 
 </html>

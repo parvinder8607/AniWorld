@@ -64,7 +64,17 @@
     width: 35px;
     height: 35px;
 }
-
+.slide{
+    height: 800px;
+}
+.slide img{
+    -webkit-mask-image: linear-gradient(330deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
+    mask-image: linear-gradient(330deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
+    
+}
+.slide-title{
+    font-size: 2rem;
+}
 .anime-player {
     display: flex;
     gap: 1%;

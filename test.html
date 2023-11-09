@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
- 
+
 </head>
 <style>
-    .slideshow-container {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
+  .slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 
-.slide {
-  display: none;
-  text-align: center;
-}
+  .slide {
+    display: none;
+    /* text-align: center; */
+    -webkit-mask-image: linear-gradient(270deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
+    mask-image: linear-gradient(270deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
+  }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
+  .slide-wrapper{
+    max-width: 800px;
+    height: 800px;
+    overflow: hidden;
+  }
 
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
 
-.prev {
-  left: 0;
-}
+  .prev {
+    left: 0;
+  }
 
-.next {
-  right: 0;
-}
-
+  .next {
+    right: 0;
+  }
 </style>
-<body>
+
+<body><div class="slide-wrapper">
   <div class="slideshow-container">
+    
     <div class="slide fade">
       <img src="image/anime-image.jpg" alt="Image 1">
     </div>
@@ -53,36 +63,39 @@ img {
     <a class="prev" onclick="plusSlides(-1)">&#9665;</a>
     <a class="next" onclick="plusSlides(1)">&#9655;</a>
   </div>
-
+</div></div>
   <script>
-  let slideIndex = 0;
-showSlides();
+    let slideIndex = 0;
+    showSlides();
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-function showSlides() {
-  let i;
-  let slides = document.querySelectorAll('.slide');
+    function showSlides() {
+      let i;
+      let slides = document.querySelectorAll('.slide');
 
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  }
+      if (slideIndex >= slides.length) {
+        slideIndex = 0;
+      }
 
-  if (slideIndex < 0) {
-    slideIndex = slides.length - 1;
-  }
+      if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+      }
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
 
-  slides[slideIndex].style.display = 'block';
-  slideIndex++;
-  setTimeout(showSlides, 5000); // Change slide every 2 seconds (2000 milliseconds)
+      slides[slideIndex].style.display = 'block';
+      slideIndex++;
+       setTimeout(showSlides, 5000);
+    }
+    // Change slide every 2 seconds (2000 milliseconds)
 
 
   </script>
 </body>
+
 </html>
