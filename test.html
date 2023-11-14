@@ -1,101 +1,14 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
-<style>
-  .slideshow-container {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .slide {
-    display: none;
-    /* text-align: center; */
-    -webkit-mask-image: linear-gradient(270deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
-    mask-image: linear-gradient(270deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
-  }
-
-  img {
-    max-width: 100%;
-    height: 100%;
-  }
-  .slide-wrapper{
-    max-width: 800px;
-    height: 800px;
-    overflow: hidden;
-  }
-
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .prev {
-    left: 0;
-  }
-
-  .next {
-    right: 0;
-  }
-</style>
-
-<body><div class="slide-wrapper">
-  <div class="slideshow-container">
-    
-    <div class="slide fade">
-      <img src="image/anime-image.jpg" alt="Image 1">
-    </div>
-    <div class="slide fade">
-      <img src="image/Eminence.jpg" alt="Image 2">
-    </div>
-    <div class="slide fade">
-      <img src="image/The 100 Girls.jpg" alt="Image 3">
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#9665;</a>
-    <a class="next" onclick="plusSlides(1)">&#9655;</a>
-  </div>
-</div></div>
-  <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function showSlides() {
-      let i;
-      let slides = document.querySelectorAll('.slide');
-
-      if (slideIndex >= slides.length) {
-        slideIndex = 0;
-      }
-
-      if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-      }
-
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
-      }
-
-      slides[slideIndex].style.display = 'block';
-      slideIndex++;
-       setTimeout(showSlides, 5000);
-    }
-    // Change slide every 2 seconds (2000 milliseconds)
-
-
-  </script>
+<body>
+  <i class="material-symbols-outlined">
+    laptop_mac
+  </i>
 </body>
-
 </html>

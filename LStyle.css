@@ -64,16 +64,38 @@
     width: 35px;
     height: 35px;
 }
+
 .slide{
-    height: 800px;
+    height: 600px;
 }
 .slide img{
-    -webkit-mask-image: linear-gradient(330deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
+    -webkit-mask-image: linear-gradient(330deg,transparent 0,rgb(36,36,40) 0%,rgb(36,36,40) 0%,transparent);
     mask-image: linear-gradient(330deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
     
 }
+.slide-content{
+    max-width: 700px;
+    padding-left: 30px;
+}
 .slide-title{
-    font-size: 2rem;
+    margin-top: 80px;
+    font-size: 3.5rem;
+}
+.slide-anime-detail{
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+.icon{
+    padding-right: 2px;
+}
+.slide-anime-detail span{
+    margin-right: 15px;
+   
+}
+.slide-desc{
+    font-size: 1rem;
+    color: #ffffffb2;
 }
 .anime-player {
     display: flex;
