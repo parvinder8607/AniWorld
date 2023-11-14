@@ -1,3 +1,4 @@
+ /* Css for Menu Section  */
 #menu-icon {
     display: none;
 }
@@ -24,6 +25,7 @@
     
 
 }
+/* CSS FOR SEARCH BAR AND ITS RESULT  */
 .search-bar{
     top: 8px;
     right: 50px;
@@ -65,13 +67,18 @@
     height: 35px;
 }
 
-.slide{
-    height: 600px;
+/* CSS FOR SLIDE SECTION  */
+.slide-image{
+   float: right;
 }
-.slide img{
-    -webkit-mask-image: linear-gradient(330deg,transparent 0,rgb(36,36,40) 0%,rgb(36,36,40) 0%,transparent);
+.slide-image img{
+    -webkit-mask-image: linear-gradient(330deg,transparent 0,rgb(32, 32, 32) 0%,rgb(32, 32, 32) 0%,transparent);
     mask-image: linear-gradient(330deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
     
+}
+.slide-detail{
+    padding-top: 100px;
+    height: 35vw;
 }
 .slide-content{
     max-width: 700px;
@@ -94,9 +101,12 @@
    
 }
 .slide-desc{
+    overflow: hidden;
+    max-height: 90px;
     font-size: 1rem;
-    color: #ffffffb2;
+    color: #ffffff88;
 }
+/* CSS FOR ANIME PLAYER  */
 .anime-player {
     display: flex;
     gap: 1%;
@@ -159,7 +169,7 @@
 .anime-detail p{
     font-size: 20px;
 }
-
+ /* CSS FOR ANIME RECOMMAND SECTION  */
 .categories{
     display: flex;
     padding: 10px 0px;
