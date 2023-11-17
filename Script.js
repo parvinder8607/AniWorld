@@ -72,6 +72,7 @@ function displayResults(results) {
 
 searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
+    query.replace(/ /g, "%20");
     const filteredResults = data.filter((result) =>
         result.title.toLowerCase().includes(query)
     );
@@ -87,4 +88,3 @@ elements.forEach(element => {
   });
 });
 
-})
