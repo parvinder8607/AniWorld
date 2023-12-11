@@ -77,8 +77,15 @@
     
 }
 .slide-detail{
+<<<<<<< Updated upstream
     padding-top: 100px;
     height: 35vw;
+=======
+    bottom: 0vh;
+    position: absolute;
+    padding: 470px 0px 85px 0px;
+    
+>>>>>>> Stashed changes
 }
 .slide-content{
     max-width: 700px;
@@ -150,7 +157,14 @@
 }
 
 .anime-detail-box {
+<<<<<<< Updated upstream
     order: 1;
+=======
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: 120px auto;
+    grid-template-rows: 170px auto;
+>>>>>>> Stashed changes
     height: 500px;
     
 }
