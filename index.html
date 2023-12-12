@@ -11,18 +11,16 @@
     <meta name="robots" content="index follow">
     <meta name="keywords" content="Jujustu Kisein, Latest Anime 2023, One piece , Naruto, Top Anime 2023">
     <title>Aniplay - Latest Anime to watch</title>
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="LStyle.css" media="screen and (min-width: 1024px)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="stylesheet" href="/LStyle.css" media="screen and (min-width: 1024px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=65435eb3b768240012ce5e56&product=inline-share-buttons&source=platform"
         async="async"></script>
     <script src="https://kit.fontawesome.com/2488af4231.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@100;200&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -41,19 +39,21 @@
                     <h2>Aniplay</h2>
                 </a>
             </div>
+            <div class="Search-box">
             <div class="search-bar" style="display: none;">
                 <input type="text" placeholder="Search..." id="sBarr">
             </div>
             <div id="results-container" style="display: none;"></div>
             <div id="search-icon" class="search-icon">
-                <img src="image/search_logo.svg" alt="search-icon">
+                <img src="/image/search_logo.svg" alt="search-icon">
             </div>
+        </div>
         </div>
     </header>
     <main>
         <div class="slideshow-container">
-            <div class="slide">
-                <div class="slide-image"><img src="image/home/ttigras.jpe" alt="image1"></div>
+            <div class="slide" style="display: none;" >
+                <div class="slide-image"><img src="/image/anime-image.jpg" alt="image1"></div>
                 <div class="slide-detail">
                     <div class="slide-content">
                         <div class="slide-title">That Time i got reincarnated as a slime</div>
@@ -73,8 +73,8 @@
                     </div>
                 </div>
             </div>
-            <div class="slide">
-                <div class="slide-image"><img src="image/home/TEIS.png" alt="IMAGE2"></div>
+            <div class="slide" style="display: none;">
+                <div class="slide-image"><img src="/image/home/TEIS.png" alt="IMAGE2"></div>
                 <div class="slide-detail">
                     <div class="slide-content">
                         <div class="slide-title">The Eminence in Shadow</div>
@@ -99,8 +99,8 @@
                     </div>
                 </div>
             </div>
-            <div class="slide">
-                <div class="slide-image"><img src="image/home/SLF.webp" alt="IMAGE2"></div>
+            <div class="slide"  style="display: none;">
+                <div class="slide-image"><img src="/image/home/SLF.webp" alt="IMAGE2"></div>
                 <div class="slide-detail">
                     <div class="slide-content">
                         <div class="slide-title">Shangri-La Frontier</div>
@@ -120,8 +120,8 @@
                     </div>
                 </div>
             </div>
-            <div class="slide">
-                <div class="slide-image"><img src="image/home/SXF.png" alt="IMAGE2"></div>
+            <div class="slide"  style="display: none;">
+                <div class="slide-image"><img src="/image/home/SXF.png" alt="IMAGE2"></div>
                 <div class="slide-detail">
                     <div class="slide-content">
                         <div class="slide-title">Spy X Family</div>
@@ -142,79 +142,47 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="slide">
-                <div class="slide-image"><img src="image/The 100 Girls.jpg" alt="image4"></div>
-                <div class="slide-content">
-                    <div class="slide-title">The 100 Girls Really Really Really loves me</div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="slide-image"><img src="image/OreSuki.jpg" alt="image5"></div>
-                <div class="slide-content">
-                    <div class="slide-title">Anime 5</div>
-                </div>
-            </div> -->
+
             <a class="prev" onclick="plusSlides(-1)">&#9665</a>
             <a class="next" onclick="plusSlides(1)">&#9665</a>
         </div>
-        <div class="RecommandBox">
-            <div>
-                <h3 style="color: #afca90c7; margin: 10px; font-size: 20px;">Recommended for you</h3>
+        <div class="trending">
+            <div class="trend-title">Trending</div>
+            <div class="trend-list-container">
+                <div id="trend-list">
+                    <div class="trend-card">
+                        <div class="trend-item">
+                            <span>Shangri-La Frontier</span>
+                        </div>
+                        <div class="trend-image">
+                            <img src="image/SLF.jpg" alt="Shangri-La Frontier">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="categories">
-                <div class="item a" data-url="/That time i got reincarnated as a Slime">
-                    <img src="image/anime-image.jpg" alt="That time I got reincarnated as a slime">
-                    <p>That Time I Got Reincarnated as a Slime</p>
-                </div>
-                <div class="emin" style="top: 15px; left: 130px;">
-                    <img src="image/anime-image.jpg" alt="That time I got reincarnated as a slime">
-                    <p>That Time I Got Reincarnated as a Slime</p>
-                    <div class="playButton"><a href="That time i got reincarnated as a Slime">Play</a></div>
-                </div>
-                <div class="item " data-url="/Eminence In Shadow">
-                    <img src="image/Eminence.jpg" alt="The Eminence in Shadow">
-                    <p>The Eminence in Shadow</p>
-                </div>
-                <div class="emin" style="top: 15px; left: 315px;">
-                    <img src="image/Eminence.jpg" alt="The Eminence in Shadow">
-                    <p style="color: black;">The Eminence in Shadow</p>
-                    <div class="playButton"><a href="/Eminence In Shadow">Play</a></div>
-                </div>
-                <div class="item" data-url="/The 100 girls really love me">
-                    <img src="image/The 100 Girls.jpg" alt="The 100 Girls Really Loves me">
-                    <p>The 100 Girlfriends Who Really, Really, Really, Really, Really Love You</p>
-                </div>
-                <div class="emin" style="top: 15px; left: 500px;">
-                    <img src="image/The 100 Girls.jpg" alt="The 100 Girls Really Loves me">
-                    <p>The 100 Girlfriends Who Really, Really, Really, Really, Really Love You</p>
-                    <div class="playButton"><a href="/The 100 girls really love me/index.html">Play</a></div>
-                </div>
-                <div class="item item4" data-url="/Oresaku">
-                    <img src="image/OreSuki.jpg" alt="ORESUKI Are You Really the Only One Who Likes Me">
-                    <p>ORESUKI Are You Really the Only One Who Likes Me</p>
-                </div>
-                <div class="emin emin4" style="top: 15px; left: 695px;">
-                    <img src="image/OreSuki.jpg" alt="ORESUKI Are You Really the Only One Who Likes Me">
-                    <p>ORESUKI Are You Really the Only One Who Likes Me</p>
-                    <div class="playButton"><a href="/Oresaku/index.html">Play</a></div>
-                </div>
-                <div class="item " data-url="/Shangri-La Frontier">
-                    <img src="image/SLF.jpg" alt="Shangri-La Frontier">
-                    <p>Shangri-La Frontier</p>
-                </div>
-                <div class="emin" style="top: 15px; left: 130px;">
-                    <img src="image/SLF.jpg" alt="Shangri-La Frontier">
-                    <p>Shangri-La Frontier</p>
-                    <div class="playButton"><a href="Shangri-La Frontier">Play</a></div>
-                </div>
-                <div class="item " data-url="/Spy X Family">
-                    <img src="image/SXF.jpg" alt="Spy X Family">
-                    <p>Spy X Family</p>
-                </div>
-                <div class="emin" style="top: 15px; left: 130px;">
-                    <img src="image/SXF.jpg" alt="Spy X Family">
-                    <p>Spy X Family</p>
-                    <div class="playButton"><a href="Spy X Family">Play</a></div>
+            <div class="scroll-button " style="top: 60px;" onclick="scrollContent('right')"><i
+                    class="fa-solid fa-arrow-right"></i></div>
+            <div class="scroll-button" style="top:165px;" onclick="scrollContent('left')"><i
+                    class="fa-solid fa-arrow-left"></i></div>
+        </div>
+        <div class="AvailableBox">
+            <div>
+                <span style="color: rgb(214, 214, 118); font-weight: bold; font-size: 30px;">Available for you</span>
+            </div>
+            <div class="Anime-container">
+                <div id="available-list">
+                    <div class="item-card">
+                        <div class="item " data-url="/That time i got reincarnated as a Slime">
+                            <img src="image/anime-image.jpg" alt="That time I got reincarnated as a slime">
+                            <p>That Time I Got Reincarnated as a Slime</p>
+                        </div>
+                        <div class="floatItem">
+                            <img src="image/anime-image.jpg" alt="That time I got reincarnated as a slime">
+                            <p>That Time I Got Reincarnated as a Slime</p>
+                            <div class="playButton" onclick="redirectToPlayer('That time')">Play</div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,98 +200,11 @@
     </footer>
 
 </body>
-<!-- <script src="Script.js"></script> -->
+<script src="/AvailList.js"></script>
+<script src="/SearchResult.js"></script>
+<script src="/trendList.js"></script>
+<script src="/Script.js"></script>
 <script>
-    const sIcon = document.getElementById('search-icon');
-    const sBar = document.querySelector('.search-bar');
-    const resultsContainer = document.getElementById("results-container");
-    const searchInput = document.getElementById('sBarr')
-
-    sIcon.addEventListener('click', () => {
-        if (sBar.style.display == 'none') {
-            resultsContainer.style.display = 'block';
-            sBar.style.display = 'block';
-            sBarr.focus();
-        } else {
-            sBar.style.display = 'none';
-            resultsContainer.style.display = 'none';
-
-        }
-    })
-    let slideIndex = 0;
-    showSlides();
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function showSlides() {
-        let i;
-        let slides = document.querySelectorAll('.slide');
-
-        if (slideIndex >= slides.length) {
-            slideIndex = 0;
-        }
-
-        if (slideIndex < 0) {
-            slideIndex = slides.length - 1;
-        }
-
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none';
-        }
-
-        slides[slideIndex].style.display = 'block';
-        slideIndex++;
-        setTimeout(showSlides, 4000); // Change slide every 2 seconds (2000 milliseconds)
-    }
-    function fetchJSON(url) {
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok: ${response.statusText}`);
-                }
-                return response.json();
-            })
-            .then(jsonData => {
-                console.log('JSON data:', jsonData);
-                // Do something with the JSON data here
-                const dataArray = jsonData.data;
-                resultsContainer.innerHTML = "";
-                // Looping through the 'data' array
-                dataArray.forEach(item => {
-                    // Accessing the 'title' property within 'attributes'
-                    const itemTitle = item.attributes.titles.en;
-                    const itemImg = item.attributes.posterImage.tiny;
-                    // Log or use the retrieved 'title' value
-                    console.log('Title:', itemTitle);
-                    console.log('ImageLink:', itemImg);
-                    const resultItem = document.createElement("div");
-                    resultItem.classList.add("result-item");
-                     resultItem.innerHTML = `
-                    <img src="${itemImg}" alt="${itemTitle}">
-                    <h3>${itemTitle}</h3>
-        
-                        `;
-                    resultsContainer.appendChild(resultItem);
-                });
-
-            })
-            .catch(error => {
-                console.error('Error fetching JSON:', error);
-            });
-
-    }
-    
-    searchInput.addEventListener("input", () => {
-    let query = searchInput.value.toLowerCase();
-    query= query.replace(/ /g, "%20");
-    console.log(query);
-    const apiUrl = `https://kitsu.io/api/edge/anime?filter%5Btext%5D=%20${query}`;
-    fetchJSON(apiUrl);
-        
-});
-    
     
 </script>
 

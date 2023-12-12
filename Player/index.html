@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width= device-width, initial-scale= 1 maximum-scale=1, user-scalable=no, minimum-scale=1"">
+    <meta name=" title" content="Aniplay">
+    <meta name="description"
+        content="Latest Animes of 2023 like Jujustu Kisein , Eminence in Shadow , and many more...">
+    <meta name="robots" content="index follow">
+    <meta name="keywords" content="Jujustu Kisein, Latest Anime 2023, One piece , Naruto, Top Anime 2023">
+    <title>Aniplay - Latest Anime to watch</title>
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="stylesheet" href="/LStyle.css" media="screen and (min-width: 1180px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@100;200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=65435eb3b768240012ce5e56&product=inline-share-buttons&source=platform" async="async"></script>
+</head>
+
+<body>
+    <header style="position: static;">
+        <div class="head" >
+            <div id="menu-icon">&#9776;</div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="/latest">Latest Aired</a></li>
+                    <li><a href="#">Top anime</a></li>
+                </ul>
+            </nav>
+            <div class="logo"><a href="../index.html">
+                    <h2>Aniplay</h2>
+                </a>
+            </div>
+            <div class="Search-box">
+            <div class="search-bar" style="display: none;">
+            
+                <input type="text" placeholder="Search..." id="sBarr">
+            </div>
+            <div id="search-icon" class="search-icon">
+                <img src="/image/search_logo.svg" alt="search-icon">
+            </div>
+            <div id="results-container" style="display: none;"></div>
+            
+        </div>
+        </div>
+    </header>
+    <main>
+        <section class="anime-player">
+            <div class="video-player">
+                <div id="AnimeTitle" class="anime-title"></div>
+                <div class="player">
+                    <!-- <div id="loading-indicator">
+                        <div class="loader"></div>
+                    </div> -->
+                    <iframe id="myIframe"
+                        src=""
+                        allow="autoplay; geolocation; display-capture; picture-in-picture"
+                        allowfullscreen="true"  allowautoplay='true' frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                </div>
+                <div id="EpisodeNo">
+                    <p>You are watching : </p>
+                    <h4>Episode - 1</h4>
+                </div>
+                <div class="AudioType">
+                    <div class="AudioIcon"
+                        style="color:rgb(65, 54, 54); font-weight: bold;border-radius: 5px ; padding: 0px 8px; background-color: rgb(212, 230, 133);">
+                        Audio
+                        <div class="image" style="display: inline;position: relative; top: 3px;"><img
+                                src="/image/audio-svgrepo-com.svg" alt=""></div>
+                    </div>
+                    <span style="color: white; font-size: 25px; font-weight: bold; padding: 0px 5px;">:</span>
+                    <div id="subBotton"
+                        style="margin-left: 15px; border-radius: 5px ; padding: 5px 15px;background-color: rgb(212, 230, 133); color: Black;">
+                        <span>Sub</span>
+                    </div>
+                    <div id="dubBotton" style="margin-left: 20px; border-radius: 5px ; padding: 5px 15px;">
+                        <span>H-Dub</span>
+                    </div>
+                </div>
+            </div>
+            <div class="episodeTable">
+                
+                <div class="episodeList-title">
+                    <h3>List of Episode:</h3>
+                </div>
+                <div class="episode-list">
+                    <div id="EpisodeList">
+                     <!-- Get data from the API -->
+                </div>
+                </div>
+            </div>
+            <div class="seasonContainer">
+            <div id="AnimeDetailBox" class="anime-detail-box">
+                <div id="animeDetailImg" class="anime-detail-image">
+                  
+                </div>
+                <div id="AnimeDetail" class="anime-detail">
+                    
+                </div>
+                <div id="animeDesc"></div>
+            </div>
+                <!-- <div class="seasonbox">
+                    <div class="seasonbtn" style="background-color: rgb(75, 97, 116);"><span>Season 1</span></div>
+                    <div class="seasonbtn" style="margin-left: 30px;"><a href="/That time i got reincarnated as a Slime//season2/index.html"><span>Season 2</span></a></div>
+                </div> -->
+            
+        </div>
+        </section>
+        <div class="AvailableBox">
+            <div>
+                <span style="color: rgb(214, 214, 118); font-weight: bold; font-size: 30px;">Available for you</span>
+            </div>
+            <div class="Anime-container">
+                <div id="available-list">
+                    <div class="item-card">
+                        <div class="item " data-url="/That time i got reincarnated as a Slime">
+                            <img src="/image/anime-image.jpg" alt="That time I got reincarnated as a slime">
+                            <p>That Time I Got Reincarnated as a Slime</p>
+                        </div>
+                        <div class="floatItem">
+                            <img src="/image/anime-image.jpg" alt="That time I got reincarnated as a slime">
+                            <p>That Time I Got Reincarnated as a Slime</p>
+                            <div class="playButton"><a href="That time i got reincarnated as a Slime">Play</a></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="row">
+                Aniplay does not store any files on our server. we only linked to the media which is hosted on 3rd
+                party services.
+                <br><br>
+                ANIPLAY Copyright © 2021 Aniplay - All rights reserved || Designed By: Parvinder Singh
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="/Script.js"></script>
+<!-- <<<<<<< Updated upstream
+<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+
+>>>>>>> Stashed changes
+
+    // Get the parameter value
+    var parameterValue = getParameterByName('parameter');
+
+    // Use the parameter value as needed
+    if (parameterValue) {
+        console.log('Parameter value:', parameterValue);
+        // Your code to use the parameter value goes here
+    }
+</script> -->
+<script src="/AvailList.js"></script>
+<script src="/SearchResult.js"></script>
+<script src="/Player/PlayerContent.js"></script>
+</html>

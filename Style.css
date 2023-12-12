@@ -2,11 +2,13 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+   cursor: default;
 }
 body{
     background-color: rgb(21, 18, 36);
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    margin: 0px 10px 0px 10px ;
 }
 a{
     text-decoration: none;
@@ -15,7 +17,7 @@ a{
 header{
     position: absolute;
     z-index: 10;
-    width: 100%;
+    width: 99%;
     /* background-color: rgb(30, 27, 80); */
     background: linear-gradient(172deg, black,rgba(0, 0, 0, 0.425), transparent);
     color:#e3ffd7;
@@ -26,11 +28,6 @@ header{
     display: flex;
     justify-content: space-between;
 }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
   
   #menu-icon {
     display: block;
@@ -62,7 +59,9 @@ body {
     padding: 10px;
     text-align: center;
   }
- 
+ .Search-box{
+    position: relative;
+ }
 .search-icon img{
     width: 30px;
     height: 30px;
@@ -81,6 +80,7 @@ body {
     font-size: 18px;
 }
 .slide{
+    position: relative;
     width: 100%;
     height: 35vw;
     overflow: hidden;
@@ -88,6 +88,7 @@ body {
 .slide-image{
     float: right;
     max-width:  75%;
+    width: 75%;
     overflow: hidden;
     height: 100%;
     background: linear-gradient(270deg,transparent 0, black 40%,transparent 50%);
@@ -102,7 +103,7 @@ body {
 .slide-detail{
     position: absolute;
     background: linear-gradient(270deg,transparent 0,black 50%,transparent 100%);
-    height: 35vw;
+   
 }
 
 .slide-content{
@@ -113,7 +114,7 @@ body {
     
 }
 .slide-title{
-    margin-top: 80px;
+   
     font-size: 3.5rem;
     color: white;
     font-size: 1.5rem;
@@ -174,28 +175,29 @@ body {
 #myIframe{
     width: 100%;
   height: 100%;
-  display: none;
+  /* display: none; */
 }
 
 #EpisodeNo{
     margin: 5px;
-    padding: 20px ;
+    padding: 20px;
     text-align: center;
-    background-color: rgb(75, 71, 92);
-    color: #74e946;
-    border-radius: 10px;
+    background-color: rgb(54 54 54);
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 2px;
 }
 .AudioType{
     display: flex;
     margin: 8px;
-    padding: 18px ;
-    justify-content: center;
+    padding: 15px 90px;
+    /* justify-content: center; */
     font-size: 18px;
     color: #f3f3f3;
     border: 1px dashed rgb(134, 118, 118);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background-color: #28283b;
-    box-shadow: 0px 0px 5px rgb(139, 114, 114);
+    /* box-shadow: 0px 0px 5px rgb(139, 114, 114); */
 }
 .server-option{
     margin: 10px;
@@ -208,29 +210,58 @@ body {
 
 .episodeTable{
     
-    background-color: rgb(109, 109, 109);
+    background-color: rgb(39, 39, 44);
     border: 2px solid rgb(59, 37, 37);
 
 }
 
 .episode-list{
     height: 300px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
-.episodeList{
+.episode-list::-webkit-scrollbar {
+    width: 12px;
+}
+
+.episode-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.episode-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+.episode-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.episodeList-title{
     padding: 10px 15px;
     color: #fff;
 }
 .episode{
-    /* margin-top: 5px;     */
-    padding: 10px 20px;
-    background-color: rgb(25, 25, 27);
-    color: #b7eba2;
-    /* border-radius: 5px; */
+       padding: 15px 23px;
+       background-color: rgb(25, 25, 27);
+       color: #babfb8;
+       font-family: 'Montserrat',sans-serif;
    
 }
+.episode:hover {
+    color: #96fa6f;
+}
+.episode span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.episode span > span{
+        display: inline;
+        margin-right: 7px;
+        font-weight: bold;
+}
 .color2{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 .anime-detail-box{
     display: flex;
@@ -241,7 +272,8 @@ body {
 }
 .anime-detail-box::before{
     content: "";
-    background-image: url("/image/anime-image.jpg"); /* Replace with the URL of your image */
+    background-color: rgb(67, 54, 80);
+    /* background-image: url("/image/anime-image.jpg"); Replace with the URL of your image */
     filter: blur(10px); /* Adjust the blur value as needed */
     position: absolute;
     top: 0;
@@ -261,7 +293,7 @@ body {
     justify-content: space-between;
 }
 .anime-detail h3{
-    color: rgb(6, 8, 19);
+    color: rgb(255, 255, 255);
   
 }
 .anime-detail p{
@@ -294,17 +326,13 @@ body {
     font-weight: bold;
     border-radius: 10px;
 }
-@media (orientation: landscape) {
-    iframe {
-        width: 100vh;
-        height: 100vw;
-    }
-}
- .RecommandBox{
+
+ .AvailableBox{
     background-color: #28283b;
-    padding: 5px;
+    padding: 15px 0px 25px 20px;
  }
-.categories {
+
+#available-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -315,26 +343,29 @@ body {
 .item {
     display: flex;
     flex-direction: column;
-    max-width: 180px;
+    max-width: 160px;
+    height: 300px;
     background-color: rgb(68, 66, 66);
-    align-items: center;
-    padding: 8px 5px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgb(116, 104, 104);
+    /* align-items: center; */
+    /* padding: 4px 0px; */
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 0px 5px rgb(116, 104, 104); */
     cursor: pointer;
 }
-
+.item p,.item img {
+    cursor: inherit;
+}
 .item p {
     color: white;
-    margin: 10px;
+    margin: 8px;
     font-weight: bold;
 }
 
 .item img {
-    width: 150px;
+    width: 160px;
     height: 200px;
 }
-.emin{
+.floatItem{
     display: none;
 }
 .footer{
