@@ -43,6 +43,7 @@ function fetchAvail(url) {
         })
         .catch(error => {
             console.error('Error fetching JSON:', error);
+            location.reload();
         });
 
 }

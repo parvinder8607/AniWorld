@@ -58,6 +58,7 @@ header{
     padding: 10px;
     text-align: center;
   }
+  /* CSS FOR SEARCH BAR AND ITS RESULT  */
  .Search-box{
     position: relative;
  }
@@ -68,7 +69,9 @@ header{
 .search-bar{
     position: absolute;
     z-index: 2;
-    width: 100%;
+    width: 90vw;
+    right: 0px;
+    top: 40px;
     
 }
 .search-bar input{
@@ -78,7 +81,44 @@ header{
     border: 1px solid #96fa6f;
     font-size: 18px;
 }
+#results-container{
+    display: block;
+    background-color: rgb(56, 55, 55);
+    position: absolute;
+    top: 82px;
+    right: 0px;
+    z-index: 4;
+    width: 90vw;
+    height: 40vh;
+    overflow: scroll;
+}
+.result{
+    display: block;
+}
+.result-item {
+    display: grid;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    height: 11vh;
+}
 
+.result-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.result-item span{ 
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    position: relative;
+    top: -44px;
+    right: -57px;
+    width: 80%;
+    height: 35px;
+}
  /* CSS FOR SLIDE SECTION  */
 
 .slide{
@@ -346,7 +386,7 @@ header{
     text-align: center;
     background-color: rgb(54 54 54);
     color: #ffffff;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 2px;
 }
 .AudioType{
@@ -378,7 +418,7 @@ header{
 }
 
 .episode-list{
-    height: 300px;
+    height: 400px;
     overflow-y: auto;
 }
 .episode-list::-webkit-scrollbar {
@@ -426,10 +466,13 @@ header{
     background-color: rgb(0, 0, 0);
 }
 .anime-detail-box{
-    display: flex;
+    display: grid;
     order: 2;
-    padding: 40px 20px;
+    padding: 25px 20px;
     position: relative;
+    grid-template-columns: 120px auto;
+    grid-template-rows: 170px auto;
+    height: 500px;
     
 }
 .anime-detail-box::before{
@@ -452,8 +495,13 @@ header{
     display: flex;
     flex-direction: column;
     padding: 15px;
-    justify-content: space-between;
+    gap : 10px
 }
+.anime-detail img{
+    width: 120px;
+    height: 180px;
+   
+   }
 .anime-detail h3{
     color: rgb(255, 255, 255);
   
@@ -462,14 +510,19 @@ header{
     font-size: 13px;
     color: rgb(255, 253, 253);
 }
-.seasonContainer{
-    margin-top: 20px;
-    order: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    flex: 0.5;
+#animeDesc{
+    grid-column: 1/span 2;
+    color: white;
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+    overflow: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    height: 165px;
+    padding : 0px 15px ;
 }
+
 .seasonbox{
     order: 1;
     background: linear-gradient(189deg, #aea9a9, transparent);

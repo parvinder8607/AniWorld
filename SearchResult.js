@@ -27,7 +27,7 @@ function fetchJSON(url) {
                 resultItem.innerHTML = `
                 <div onClick="redirectToPlayer('${itemID}')">
                 <img src="${itemImg}" alt="${itemTitle}">
-                <h3>${itemTitle}</h3>
+                <span>${itemTitle}</span>
                 </div>
                     `;
                 resultsContainer.appendChild(resultItem);

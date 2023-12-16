@@ -31,25 +31,19 @@ body{
 }
 /* CSS FOR SEARCH BAR AND ITS RESULT  */
 .search-bar{
-       
+        top: 0px;
         right: 50px;
         width: 15vw;
-
 }
 #results-container{
-    display: block;
-    background-color: rgb(56, 55, 55);
-    position: absolute;
     top: 44px;
     right: 50px;
-    z-index: 4;
     width: 15vw;
     height: 41vh;
     overflow: hidden;
-    /* max-width: 18%; */
 }
 .result{
-    display: block;
+    display: inline-block;
 }
 .result-item {
     display: flex;
@@ -136,6 +130,7 @@ body{
  } 
 
  .scroll-button{
+    display: block;
     font-size: 80px;
     padding: 10px 13px 10px 0px;
     position: absolute;
@@ -271,6 +266,7 @@ body{
     /* ------------------------------CSS FOR PLAYER BUTTON ----------------------------- */
 
 /* CSS FOR ANIME PLAYER  */
+
 .anime-player {
     display: flex;
     gap: 3%;
@@ -301,7 +297,15 @@ body{
 .player {
     height: 400px;
 }
-
+#EpisodeNo{
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(54 54 54);
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 2px;
+}
 .episodeTable {
     order: 1;
     flex: 0.3;
@@ -314,9 +318,12 @@ body{
     height: 540px;
    
 }
-
+.seasonContainer{
+    order: 3;
+}
 .anime-detail-box {
     display: grid;
+    padding : 40px 20px ;
     grid-template-columns: 120px auto;
     grid-template-rows: 170px auto;
     height: 500px;
