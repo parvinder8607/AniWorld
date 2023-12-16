@@ -26,11 +26,11 @@ function fetchAvail(url) {
                 const availItem = document.createElement("div");
                 availItem.classList.add("item-card");
                 availItem.innerHTML = `
-                <div class="item " data-url="/That time i got reincarnated as a Slime">
+                <div class="item " onClick="redirectToPlayer('${itemID}')">
                 <img src="${itemImg}" alt="${itemTitle}">
                 <p>${itemTitle}</p>
             </div>
-            <div class="floatItem">
+            <div class="floatItem" onClick="redirectToPlayer('${itemID}')">
             
             <span>${itemTitle}</span>
             <p>${itemDesc}</p>

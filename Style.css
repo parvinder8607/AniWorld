@@ -8,7 +8,6 @@ body{
     background-color: rgb(21, 18, 36);
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-    margin: 0px 10px 0px 10px ;
 }
 a{
     text-decoration: none;
@@ -79,16 +78,20 @@ header{
     border: 1px solid #96fa6f;
     font-size: 18px;
 }
+
+ /* CSS FOR SLIDE SECTION  */
+
 .slide{
     position: relative;
     width: 100%;
-    height: 35vw;
+    height: 60vw;
     overflow: hidden;
 }
+
 .slide-image{
     float: right;
-    max-width:  75%;
-    width: 75%;
+    max-width:  80%;
+    width: 80%;
     overflow: hidden;
     height: 100%;
     background: linear-gradient(270deg,transparent 0, black 40%,transparent 50%);
@@ -102,46 +105,205 @@ header{
 }
 .slide-detail{
     position: absolute;
-    background: linear-gradient(270deg,transparent 0,black 50%,transparent 100%);
-   
+    background: linear-gradient(270deg,transparent 0,black 80%,transparent 100%);
+    bottom: 0vh;
+    padding: 200px 0px 35px 0px;
 }
 
 .slide-content{
     max-width: 700px;
-    padding-left: 30px;
-    
+    padding: 10px;
     z-index: 3;
     
 }
 .slide-title{
-   
-    font-size: 3.5rem;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     
 }
 .slide-anime-detail{
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     margin-bottom: 10px;
 }
 .icon{
     padding-right: 2px;
 }
 .slide-anime-detail span{
-    margin-right: 15px;
+    margin-right: 5px;
     
    
 }
 .slide-desc{
-    font-size: 1rem;
-    color: #ffffffb2;
+    display: none;
 }
 .prev, .next{
     position: absolute;
     right: 0px;
 }
+/* CSS FOR TRENDING SECTION  */
+
+.trending{
+    padding: 5px 5px 28px 10px;
+    position: relative;
+ }
+ .trend-title{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+ }
+ .trend-list-container{
+    position: relative;
+    overflow: scroll; /* Hide horizontal scrollbar */
+    white-space: nowrap;
+ }
+ .scroll-button{
+    display: none;
+ }
+ #trend-list{
+    display: flex;
+    gap: 70px;
+    
+ }
+ .trend-card
+ {
+    position: relative;
+    width: 210px;
+    height: 100%;
+ }
+ .trend-item span{
+    position: absolute;
+    top: 76px;
+    left: -73px;
+    transform: rotate(270deg);
+    background: rgba(0, 0, 0, 0.521);
+    color: white;
+    font-weight: 100;
+    font-size: 18px;
+    width: 183px;
+    padding: 4px 9px;
+    max-height: 30px;
+    overflow: hidden;
+ }
+ .trend-image{
+    position: relative;
+    width: 100px;
+    height: 210px;
+    left: 34px;
+ }
+ .trend-image img{
+    width: 120px;
+    height: 180px;
+    cursor: pointer;
+ }
+
+  /* CSS FOR ANIME AVAILABLE BOX SECTION  */
+ .AvailableBox{
+    background-color: #28283b;
+    padding: 15px 0px 25px 15px;
+ }
+ .AvailableBox span{
+    color: rgb(214, 214, 118);
+    font-weight: bold;
+    font-size: 25px;
+ }
+
+#available-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px 15px 0px 0px;
+   
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+    height: 300px;
+    background-color: rgb(68, 66, 66);
+    /* align-items: center; */
+    /* padding: 4px 0px; */
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 0px 5px rgb(116, 104, 104); */
+    cursor: pointer;
+}
+.item p,.item img {
+    cursor: inherit;
+}
+.item p {
+    color: white;
+    margin: 8px;
+    font-weight: bold;
+}
+
+.item img {
+    width: 160px;
+    height: 200px;
+}
+.floatItem{
+    display: none;
+}
+.footer{
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+
+                /* ---------------CSS FOR PLAYER PAGE ---------------- */
+
+     /* CSS FOR ANIME PLAYER  */
 .anime-title{
     display: none;
 }
@@ -326,98 +488,3 @@ header{
     font-weight: bold;
     border-radius: 10px;
 }
-
- .AvailableBox{
-    background-color: #28283b;
-    padding: 15px 0px 25px 20px;
- }
-
-#available-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px 0px;
-   
-}
-
-.item {
-    display: flex;
-    flex-direction: column;
-    max-width: 160px;
-    height: 300px;
-    background-color: rgb(68, 66, 66);
-    /* align-items: center; */
-    /* padding: 4px 0px; */
-    /* border-radius: 5px; */
-    /* box-shadow: 0px 0px 5px rgb(116, 104, 104); */
-    cursor: pointer;
-}
-.item p,.item img {
-    cursor: inherit;
-}
-.item p {
-    color: white;
-    margin: 8px;
-    font-weight: bold;
-}
-
-.item img {
-    width: 160px;
-    height: 200px;
-}
-.floatItem{
-    display: none;
-}
-.footer{
-    background:#000;
-    padding:30px 0px;
-    font-family: 'Play', sans-serif;
-    text-align:center;
-    }
-    
-    .footer .row{
-    width:100%;
-    margin:1% 0%;
-    padding:0.6% 0%;
-    color:gray;
-    font-size:0.8em;
-    }
-    
-    .footer .row a{
-    text-decoration:none;
-    color:gray;
-    transition:0.5s;
-    }
-    
-    .footer .row a:hover{
-    color:#fff;
-    }
-    
-    .footer .row ul{
-    width:100%;
-    }
-    
-    .footer .row ul li{
-    display:inline-block;
-    margin:0px 30px;
-    }
-    
-    .footer .row a i{
-    font-size:2em;
-    margin:0% 1%;
-    }
-    
-    @media (max-width:720px){
-    .footer{
-    text-align:left;
-    padding:5%;
-    }
-    .footer .row ul li{
-    display:block;
-    margin:10px 0px;
-    text-align:left;
-    }
-    .footer .row a i{
-    margin:0% 3%;
-    }
-    }

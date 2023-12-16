@@ -96,12 +96,12 @@ function scrollContent(direction) {
       container.scrollLeft += scrollAmount;
     }
   }
-
+// const Iframe = document.getElementById('myIframe');
 // Redirection Function for page
   function redirectToPlayer(parameterValue) {
     // Construct the URL with the path parameter
     var url = '/Player/index.html?AnimeId=' + parameterValue;
-   Iframe.src ="https://streamtape.site/e/eA8ABOkqBJcYqkm";
+//    Iframe.src ="https://streamtape.site/e/eA8ABOkqBJcYqkm";
     // Redirect to the constructed URL
     window.location.href = url;
 }
