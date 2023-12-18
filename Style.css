@@ -541,3 +541,26 @@ header{
     font-weight: bold;
     border-radius: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* i dont what the fuck was that  */
+
+.something {
+border: 2px solid rebeccapurple;
+    border-width: 108px;
+    border-left-width: 10px;
+    position: absolute;
+    overflow: hidden;
+    opacity: 0.3;
+}
+
+
