@@ -1,0 +1,49 @@
+{"name":"AniWorld",
+"short_name":"AniWorld",
+"description":"Watch Online  Anime in English Sub/Dub and Hindi",
+"icons":
+[
+    {"src":"https://aniworld.fun/Logo/logo.png",
+    "sizes":"192x192",
+    "type":"image\/png",
+    "purpose":"any"},
+
+    {"src":"https://aniworld.fun/Logo/logo.png",
+    "sizes":"192x192",
+    "type":"image\/png",
+    "purpose":"maskable"},
+    {"src":"https://aniworld.fun/Logo/logo.png",
+    "sizes":"512x512",
+    "type":"image\/png",
+    "purpose":"any"},
+    {"src":"https://aniworld.fun/Logo/logo.png",
+    "sizes":"512x512",
+    "type":"image\/png",
+    "purpose":"maskable"},
+    {"src":"https://aniworld.fun/Logo/logo.png",
+    "sizes":"512x512",
+    "type":"image\/png",
+    "purpose":"monochrome"}
+    ],
+    "screenshots":
+    [{"src":"https://aniworld.fun/Logo/logo.png",
+    "type":"image\/png"},{"src":"https://aniworld.fun/Logo/logo.png",
+    "type":"image\/png"}
+    ],
+    "background_color":"#241630",
+    "theme_color":"#241630",
+    "display":"fullscreen",
+    "dir":"ltr",
+    "orientation":"any",
+    "start_url":"\/?utm_source=superpwa&utm_medium=superpwa&utm_campaign=superpwa\/",
+    "categories":["entertainment"],
+    "scope":"\/",
+    "shortcuts":[
+    {"name":"AniWorld",
+    "url":"\/","description":"Watch Online Anime in English Sub/dub and Hindi",
+    "icons":
+    [{"src":"https://aniworld.fun/Logo/logo.png",
+    "sizes":"192x192"}
+    ]}
+    ]
+}

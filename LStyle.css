@@ -179,6 +179,7 @@ body{
  }
 #available-list{
     display: flex;
+    flex-wrap: wrap;
     padding: 20px 0px;
     gap: 20px;
 }

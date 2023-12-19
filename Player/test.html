@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <style>
+    #inspect-message {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #f00;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Your website content goes here -->
+
+<div id="inspect-message">Please use the website responsibly!</div>
+
+<script>
+  // Check if the browser's developer tools are open
+  window.addEventListener('devtoolschange', function (event) {
+    var message = document.getElementById('inspect-message');
+
+    if (event.detail.isOpen) {
+      // Display the message when developer tools are open
+      message.style.display = 'block';
+    } else {
+      // Hide the message when developer tools are closed
+      message.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
