@@ -30,8 +30,8 @@
     "type":"image\/png"},{"src":"https://aniworld.fun/Logo/logo.png",
     "type":"image\/png"}
     ],
-    "background_color":"#241630",
-    "theme_color":"#241630",
+    "background_color":"#000000",
+    "theme_color":"#000000",
     "display":"fullscreen",
     "dir":"ltr",
     "orientation":"any",
