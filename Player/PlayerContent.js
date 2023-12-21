@@ -83,7 +83,11 @@ var beforePseudoElement = window.getComputedStyle(animeDetailDiv, ':before');
 
 // Function for Getting Anime Details from the API 
 function fetchDetail(url) {
-  fetch(url)
+  fetch(url, {
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
     .then(response => {
       if (!response.ok) {
         throw new Error(`Network response was not ok: ${response.statusText}`);
