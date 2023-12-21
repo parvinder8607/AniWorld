@@ -1,17 +1,30 @@
 const AvailList= document.getElementById('available-list');
+const maxRetries = 3; // Maximum number of retry attempts
+let retryCount = 0;
 
+
+  
+  // Usage
+  
 function fetchAvail(url) {
-    fetch(url, {
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-        .then(response => {
+    function fetchDataWithRetry() {
+        return fetch(url)
+          .then(response => {
             if (!response.ok) {
-                throw new Error(`Network response was not ok: ${response.statusText}`);
+              if (response.status === 429 ) {
+                // Retry with exponential backoff
+                retryCount++;
+                const delay = Math.pow(2, retryCount) * 1000; // Exponential backoff formula
+                console.log(`Too Many Requests. Retrying in ${delay / 1000} seconds...`);
+                return new Promise(resolve => setTimeout(resolve, 1000)).then(fetchDataWithRetry);
+              } else {
+                throw new Error(`Network response was not ok, status: ${response.status}`);
+              }
             }
             return response.json();
-        })
+          });
+      }
+    fetchDataWithRetry()
         .then(jsonData => {
             console.log('JSON data:', jsonData);
             // Do something with the JSON data here

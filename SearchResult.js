@@ -1,8 +1,22 @@
+
 function fetchJSON(url) {
-    fetch(url)
+    fetch(url, {
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`Network response was not ok: ${response.statusText}`);
+            if (!response.ok) { 
+                if (response.status === 429 && retryCount < maxRetries) {
+                // Retry with exponential backoff
+                retryCount++;
+                const delay = Math.pow(2, retryCount) * 1000; // Exponential backoff formula
+                console.log(`Too Many Requests. Retrying in ${delay / 1000} seconds...`);
+                return new Promise(resolve => setTimeout(resolve, delay)).then(fetch);
+              } else {
+                throw new Error(`Network response was not ok, status: ${response.status}`);
+              }
+
             }
             return response.json();
         })
