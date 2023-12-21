@@ -81,9 +81,9 @@ function showSlides() {
 }
 
 //Function call for trending list
-let trendUrl = "https://api.jikan.moe/v4/top/anime?filter=airing&type=tv&sfw=false&rating=r17";
+// let trendUrl = "https://api.jikan.moe/v4/top/anime?filter=airing&type=tv&sfw=false&rating=r17";
 
-fetchTrend(trendUrl);
+// fetchTrend(trendUrl);
 //function for scroll trending list
 
 function scrollContent(direction) {

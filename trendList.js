@@ -49,6 +49,10 @@ const trendList = document.getElementById("trend-list");
         });
 
 }
+
+let trendUrl = "https://api.jikan.moe/v4/top/anime?filter=airing&type=tv&sfw=false&rating=r17";
+
+fetchTrend(trendUrl);
 // Attribute of kitsu api for trending page info
 // let itemTitle = item.attributes.titles.en;
 // if(itemTitle === undefined){
