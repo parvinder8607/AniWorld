@@ -16,7 +16,7 @@ function fetchAvail(url) {
                 retryCount++;
                 const delay = Math.pow(2, retryCount) * 1000; // Exponential backoff formula
                 console.log(`Too Many Requests. Retrying in ${delay / 1000} seconds...`);
-                return new Promise(resolve => setTimeout(resolve, 1000)).then(fetchDataWithRetry);
+                return new Promise(resolve => setTimeout(resolve, 350)).then(fetchDataWithRetry);
               } else {
                 throw new Error(`Network response was not ok, status: ${response.status}`);
               }
