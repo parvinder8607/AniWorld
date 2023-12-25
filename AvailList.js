@@ -65,6 +65,7 @@ function fetchAvail(url) {
 }
 
 let availAnime=[
+    "42249",
     "54918",
     "53887",
     "41487",
