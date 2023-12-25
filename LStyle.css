@@ -1,6 +1,4 @@
-body{
-    margin: 0px 10px 0px 10px ;  
-}
+
 
 /* Css for Menu Section  */
 #menu-icon {
@@ -83,7 +81,7 @@ body{
     
 }
 .slide-detail{
-    background: linear-gradient(270deg,transparent 0,black 33%,transparent 100%);
+    background: linear-gradient(270deg,transparent 0,black 33%,black 100%);
     padding: 500px 0px 70px 0px;
     
 }

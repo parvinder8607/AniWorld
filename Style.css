@@ -138,7 +138,7 @@ header{
 }
 .slide-image img{
     float: right;
-    width: 130%;
+    width: 100%;
     -webkit-mask-image: linear-gradient(330deg,transparent 0,rgb(36,36,40) 0%,rgb(36,36,40) 10%,transparent);
     mask-image: linear-gradient(330deg,transparent 0,rgb(36,36,40) 30%,rgb(36,36,40) 70%,transparent);
     
@@ -241,7 +241,7 @@ header{
 
   /* CSS FOR ANIME AVAILABLE BOX SECTION  */
  .AvailableBox{
-    background-color: #28283b;
+    background: linear-gradient(90deg,transparent 0,rgb(28, 25, 34) 33%,rgb(23, 23, 24) 100%);
     padding: 15px 0px 25px 15px;
  }
  .AvailableBox span{
@@ -449,7 +449,6 @@ header{
        padding: 15px 23px;
        background-color: rgb(25, 25, 27);
        color: #babfb8;
-       color: ;
        font-family: 'Montserrat',sans-serif;
    
 }
