@@ -50,7 +50,7 @@ const trendList = document.getElementById("trend-list");
 
 }
 
-let trendUrl = "https://api.jikan.moe/v4/top/anime?filter=airing&type=tv&sfw=false&rating=r17";
+let trendUrl = "https://api.jikan.moe/v4/top/anime?filter=favorite&type=tv&sfw=false&rating=r17";
 
 fetchTrend(trendUrl);
 // Attribute of kitsu api for trending page info

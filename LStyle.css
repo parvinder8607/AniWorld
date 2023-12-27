@@ -81,8 +81,8 @@
     
 }
 .slide-detail{
-    background: linear-gradient(270deg,transparent 0,black 33%,black 100%);
-    padding: 500px 0px 70px 0px;
+    background: linear-gradient(270deg,transparent 0,#242428 30%,#242428 100%);
+    padding: 500px 0px 150px 0px;
     
 }
 .slide-content{
@@ -94,8 +94,8 @@
 }
 .slide-anime-detail{
     font-size: 0.9rem;
-    margin-bottom: 15px;
-    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 .icon{
     padding-right: 2px;
@@ -117,11 +117,11 @@
  /* CSS FOR TRENDING SECTION  */
 
  .trending{
-    padding: 10px 15px 40px 20px;
+    padding: 10px 15px 40px 45px;
  }
  .trend-title{
     font-size: 30px;
-    margin: 10px;
+    margin: 15px;
  }
  .trend-list-container{
     overflow: hidden;
@@ -170,6 +170,9 @@
 
 
  /* CSS FOR ANIME RECOMMAND SECTION  */
+ .AvailableBox {
+    padding:  15px 0px 25px 45px;
+ }
  .AvailableBox span{
     color: rgb(214, 214, 118);
     font-weight: bold;

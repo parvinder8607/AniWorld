@@ -5,7 +5,7 @@
    cursor: default;
 }
 body{
-    background-color: rgb(21, 18, 36);
+    background-color: #242428;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
@@ -415,8 +415,8 @@ header{
 
 
 .episodeTable{
-    
-    background-color: rgb(39, 39, 44);
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
     border: 2px solid rgb(59, 37, 37);
 
 }
