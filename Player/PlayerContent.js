@@ -134,6 +134,39 @@ fetchDetail(url);
 // Array of anime objects
 let arrayOfObjects = [
   {
+    animeId: 54918,
+    animeName: 'Tokyo Revenger Season 3',
+    season: {
+      totalSeason: 3,
+      season_first: "42249",
+      season_second: "50608",
+      season_third: "54918"
+    },
+    animeLink:
+    {
+      Sub_link: [
+        'https://streamtape.site/e/2LjQGRRAJjCQ1D',
+        'https://streamtape.site/e/J01l83a29QUjjW9',
+        'https://streamtape.site/e/4z80zd4PY0iOqX',
+        'https://streamtape.site/e/6WGDVYqZ69C9JDz',
+        'https://streamtape.site/e/L3l02BP0dqHR0J0',
+        'https://streamtape.site/e/OWXvBjkXwRfGYD',
+        'https://streamtape.site/e/DQ68DbJrxgHkewj',
+        'https://streamtape.site/e/LDL0oJb0ORfR1LA',
+        'https://streamtape.site/e/arKjrwKL3MsxL8e',
+        'https://streamtape.site/e/ogLp9M7J2LTvQm',
+        'https://streamtape.site/e/4GmGLk7oJMUdZv',
+        'https://streamtape.site/e/wOM19V3WzwFJOoL',
+        'https://streamtape.site/e/69z9olgrbRuLMq'
+
+      ],
+      Dub_link: [
+        
+      ]
+    }
+
+  },
+  {
     animeId: 50608,
     animeName: 'Tokyo Revenger Season 2',
     season: {
@@ -160,6 +193,20 @@ let arrayOfObjects = [
         'https://streamtape.site/e/3rRROxbyRzf6l0/EP-13.v0.1680377711.1080p.mp4'
       ],
       Dub_link: [
+        'https://streamtape.site/e/xrmdxjPwDJtk3LG',
+        'https://streamtape.site/e/aVK0Pzgd7Vtzpk',
+        'https://streamtape.site/e/O1p2Bdyo0qU1kj',
+        'https://streamtape.site/e/PWP2qObGAGf0aL0',
+        'https://streamtape.site/e/rDxOGPgMW1Cb7eR',
+        'https://streamtape.site/e/mqmD0aMDqKIbAgQ',
+        'https://streamtape.site/e/L2qkAQXoJYHRro0',
+        'https://streamtape.site/e/W9O26m6pKmCqd1',
+        'https://streamtape.site/e/xb3oWAPYZGHkPQV',
+        'https://streamtape.site/e/jpKXBrgda2fzyYm',
+        'https://streamtape.site/e/Y7DLjjKWg7sLAB',
+        'https://streamtape.site/e/MaBbd7JmPlHmJRw',
+        'https://streamtape.site/e/g9x3z9Rl02Iq24O'
+
 
 
       ]
@@ -494,19 +541,97 @@ function playVideo(playEpd, index) {
                     </div> */}
 const Iframe = document.getElementById('myIframe');
 Iframe.src = result.animeLink.Sub_link[0];
-console.log(result.animeLink);
 // firstEp.style.color = 'red';
 const AudioSection = document.querySelector('.AudioType');
-const DubAudio =`<div id="dub" onclick="changeAudio('dub')" style="margin-left: 20px; border-radius: 5px ; padding: 5px 15px;">
+const DubAudio = `<div id="dub" onclick="changeAudio('dub')" style="margin-left: 20px; border-radius: 5px ; padding: 5px 15px;">
 <span>Dub</span>
 </div> `;
 //Function for adding audio types buttons
-isDub = result.animeLink.Dub_link[currentEp-1];
-function addAudioButton(){
-  if(isDub != null){
+isDub = result.animeLink.Dub_link[currentEp - 1];
+function addAudioButton() {
+  if (isDub != null) {
     console.log("English Dub available");
     AudioSection.innerHTML += DubAudio;
-   
+
   }
 }
 addAudioButton();
+// ------------------------------------------------------ Download Button Section ------------------------------------------------
+
+function extractVideoId(link) {
+  // Define a regular expression pattern to match the video ID
+  const regex = /\/e\/([^/]+)\//;
+
+  // Use the regex pattern to extract the video ID from the link
+  const match = link.match(regex);
+
+  // Check if a match is found
+  if (match && match[1]) {
+      // The video ID is stored in match[1]
+      return match[1];
+  } else {
+     console.log('Video id does not detected');
+      // Return null if no match is found
+      return null;
+  }
+}
+
+// Example usage
+const videoLink = Iframe.src;
+const videoId = extractVideoId(videoLink);
+
+// Output the result
+console.log('Video id from Url', videoId); // Output: jZarJB6emOsL8D
+
+const login = "eaf09585290523f4f998";
+const key = "okLAj7WeYouJBX0";
+let ticket= null;
+function fetchDownTicket(url) {
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then(jsonData => {
+      console.log('JSON data of Download Api:', jsonData);
+      ticket = jsonData.result.ticket;
+      console.log('Ticket Value',ticket);
+      download.innerHTML += `Wait`;
+      setTimeout(() => {
+        downLink = `https://api.streamtape.com/file/dl?file=${videoId}&ticket=${ticket}`;
+        fetchDownLink(downLink)
+      }, 5000);
+    })
+    .catch(error => {
+      console.error('Error fetching JSON:', error);
+    });
+
+  }
+
+function fetchDownLink(url) {
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then(jsonData => {
+      console.log('JSON data for download link :', jsonData);
+      let DownLink = jsonData.result.url;
+      download.href = DownLink;
+      download.innerHTML = `Start Download`;
+    })
+    .catch(error => {
+      console.error('Error fetching JSON:', error);
+    });
+    
+  }
+  let downUrl =`https://api.streamtape.com/file/dlticket?file=${videoId}&login=${login}&key=${key}`;
+  downloadButton.addEventListener('click',()=>{
+    fetchDownTicket(downUrl);
+  });
+  // fetchDownTicket(downUrl);

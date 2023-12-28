@@ -383,7 +383,15 @@ header{
   height: 100%;
   /* display: none; */
 }
-
+.playTool{
+    padding: 5px 0px 0px 5px;
+}
+#downloadButton{
+    display: inline-block;
+    background-color: #96fa6f;
+    padding: 5px;
+    border-radius: 5px;
+}
 #EpisodeNo{
     margin: 5px;
     padding: 20px;
