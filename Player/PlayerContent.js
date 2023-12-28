@@ -598,7 +598,7 @@ function fetchDownTicket(url) {
       console.log('JSON data of Download Api:', jsonData);
       ticket = jsonData.result.ticket;
       console.log('Ticket Value',ticket);
-      download.innerHTML += `Wait`;
+      download.innerHTML = `Wait... `;
       setTimeout(() => {
         downLink = `https://api.streamtape.com/file/dl?file=${videoId}&ticket=${ticket}`;
         fetchDownLink(downLink)
